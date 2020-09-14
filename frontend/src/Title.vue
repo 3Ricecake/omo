@@ -16,9 +16,9 @@
 
 <script>
 import "./assets/css/style.scss";
-// import Header from "./components/common/Header.vue";
-// import constants from "./lib/constants";
-// import axios from "axios";
+import Header from "./components/common/Header.vue";
+import constants from "./lib/constants";
+import axios from "axios";
 </script>
 
 <style>
