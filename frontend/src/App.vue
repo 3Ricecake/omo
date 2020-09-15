@@ -1,24 +1,34 @@
 <template>
-  <v-app>
-    <v-main>
-      <Header></Header>
-      <router-view id="container" />
-    </v-main>
-    <!-- <div id="app">
-      <div id="nav">
-        <router-link to="/">Home</router-link>|
-        <router-link to="/about">About</router-link>
-      </div>
-      <router-view />
-    </div>-->
-  </v-app>
+  <dir id="App">
+    <main-header />
+    <div id="nav">
+      <router-link to="/">Home</router-link>|
+      <router-link to="/about">About</router-link>
+    </div>
+    <router-view id="container" />
+  </dir>
 </template>
 
 <script>
 import "./assets/css/style.scss";
-// import Header from "./components/common/Header.vue";
+import "./assets/css/main.scss";
+
+import MainHeader from "./components/common/Header.vue";
+import constants from "./lib/constants";
 // import constants from "./lib/constants";
 // import axios from "axios";
+
+export default {
+  name: "App",
+  component: {
+    "main-header": MainHeader,
+  },
+  data() {
+    return {
+      constants,
+    };
+  },
+};
 </script>
 
 <style>
