@@ -1,0 +1,41 @@
+logging:
+  level:
+    root: info
+security:
+  admin:
+    secret: ${GB_ADMIN_SECRET:admin}
+  jwt:
+    secret: ${GB_JWT_SECRET:verySecretJwtSecret}
+    expiration: 28800
+server:
+  error:
+    whitelabel:
+      enabled: false
+  port: ${GB_SERVER_PORT:8080}
+spring:
+  servlet:
+    multipart:
+      enabled: true
+      file-size-threshold: 2KB
+      max-file-size: 5MB
+      max-request-size: 50MB
+  jackson:
+    default-property-inclusion: non_null
+
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQL9Dialect
+    properties:
+      hibernate:
+        temp:
+          use_jdbc_metadata_defaults: false
+    hibernate:
+      ddl-auto: update
+  datasource:
+    platform: postgres
+    url: ${GB_POSTGRES_URL:jdbc:postgresql://localhost:5432/testdb}
+    username: ${GB_POSTGRES_USERNAME:postgres}
+    password: ${GB_POSTGRES_PASSWORD:postgres}
+
+---
+spring:
+  profiles: test

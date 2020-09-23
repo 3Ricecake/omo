@@ -1,0 +1,29 @@
+version: '2'
+
+services:
+  guestblog:
+    container_name: ${COMPOSE_PROJECT_NAME}-${GUESTBLOG_CONTAINER_NAME}
+    image: ${COMPOSE_IMAGE_NAME}
+    build: .
+    depends_on:
+    - postgresql
+    network_mode: "service:postgresql"
+    environment:
+    - GB_POSTGRES_USERNAME=postgres
+    - GB_POSTGRES_PASSWORD=postgres
+    - GB_POSTGRES_URL=jdbc:postgresql://localhost:5432/testdb
+
+  postgresql:
+    image: postgres:alpine
+    container_name: ${COMPOSE_PROJECT_NAME}-${DATABASE_CONTAINER_NAME}
+    environment:
+    - POSTGRES_USER=postgres
+    - POSTGRES_PASSWORD=postgres
+    - POSTGRES_DB=testdb
+    volumes:
+    - "$PWD/database:/var/lib/postgresql/data"
+    ports:
+    - "80:8080" # tomcat port
+    - "5432:5432" # postgresql port
+    env_file:
+      - .env

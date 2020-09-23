@@ -1,0 +1,27 @@
+## Ignore all files
+/*
+
+## Include project files
+!/src/
+!/src/webclient/
+!pom.xml
+!package.json
+!package-lock.json
+!.dockerignore
+!.gitignore
+!.editorconfig
+!.env
+!Dockerfile
+!docker-compose.yml
+!lombok.config
+!.babelrc
+!webpack.config.js
+!Procfile
+!system.properties
+!Makefile
+!README.md
+!CONTRIBUTING.md
+
+## Exclude IDE files
+# JetBrains
+*.iml
