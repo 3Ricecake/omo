@@ -56,9 +56,12 @@ Flow 2 ) 마스크인식 + 마스크 벗고 얼굴인식
 
 # 😷 마스크 인식 -> 음성(화자) 인식 과정
 
-![마스크-음성](https://user-images.githubusercontent.com/32058420/95406067-79c83980-0954-11eb-8bee-094a3e14b6b6.png)
+![마스크-음성](https://user-images.githubusercontent.com/32058420/95840309-f311c300-0d7e-11eb-9822-722f88c870a5.png)
+
 
 마스크가 인식이 되면 화자의 목소리를 통해 방문자가 눈군지 판별합니다
+
+(음성 녹음 사용 컴포넌트 ```https://www.npmjs.com/package/vue-audio-recorder```)
 
 <br>
 <br>
@@ -73,7 +76,7 @@ Flow 2 ) 마스크인식 + 마스크 벗고 얼굴인식
 
 - 등록 회원 관리 및 음성 훈련
  
-<img src = 'https://user-images.githubusercontent.com/32058420/95406840-628a4b80-0956-11eb-822c-1e60b43b78c8.png' alt="회원관리" width=800px>
+<img src = 'https://user-images.githubusercontent.com/32058420/95609556-d6813c80-0a99-11eb-8f39-4b6b1ed9c24d.png' alt="회원관리" width=800px>
 
 해당 기관에 등록 되어있는 회원들을 관리하고, 음성을 훈련 시킬 수 있습니다
 
@@ -82,7 +85,7 @@ Flow 2 ) 마스크인식 + 마스크 벗고 얼굴인식
 
 - 방문자 명부
 
-<img src = 'https://user-images.githubusercontent.com/32058420/95406924-982f3480-0956-11eb-985c-8911b61be13d.png' alt="방문자명부" width=800px>
+<img src = 'https://user-images.githubusercontent.com/32058420/95609715-22cc7c80-0a9a-11eb-9da4-ceac4ca0ae9d.png' alt="방문자명부" width=800px>
 
 해당 기관에 방문한 사람들의 목록을 보여줍니다
 
@@ -99,7 +102,7 @@ Flow 2 ) 마스크인식 + 마스크 벗고 얼굴인식
 <br>
 <br>
 
-# 🧣 프로젝트 정보
+# 📃 프로젝트 정보
 
 1.팀이름 : 찰떡꿀떡콩떡
 
@@ -144,5 +147,3 @@ Flow 2 ) 마스크인식 + 마스크 벗고 얼굴인식
 ## :calendar: 프로젝트 진행 일정
 
 <img src="https://user-images.githubusercontent.com/32058420/95409680-227a9700-095d-11eb-8da0-9eb7eb19345d.png">
-
-
